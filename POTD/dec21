@@ -5,7 +5,6 @@ public:
         int n = points.size();
         sort(begin(points), end(points));
 
-        
         int maxVal = 0;
         
         for(int i = 1; i<n; i++) 
