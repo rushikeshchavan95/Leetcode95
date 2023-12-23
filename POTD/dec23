@@ -19,7 +19,8 @@ public:
             } else if(ch == 'N') 
             {
                 y += 1;
-            } else {
+            } else 
+            {
                 y -= 1;
             }
             
