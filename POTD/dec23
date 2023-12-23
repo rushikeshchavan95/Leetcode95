@@ -13,8 +13,7 @@ public:
             if(ch == 'E') 
             {
                 x += 1;
-            } 
-            else if(ch == 'W') 
+            } else if(ch == 'W') 
             {
                 x -= 1;
             } 
