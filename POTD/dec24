@@ -12,8 +12,7 @@ public:
                 {
                     start_with_0++;
                 }
-            } 
-            else 
+            } else 
             {
                 if(s[i] == '0') 
                 {
