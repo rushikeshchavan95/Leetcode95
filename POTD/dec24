@@ -20,8 +20,7 @@ public:
                     start_with_0++;
                 }
             }
-        }
-        
+        } 
         return min(start_with_0, n - start_with_0);
     }
 };
