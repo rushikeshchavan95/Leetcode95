@@ -13,7 +13,8 @@ public:
         
         int sum = 0;
         
-        for(int i = 1; i <= k; i++) {
+        for(int i = 1; i <= k; i++) 
+        {
             sum  = sum + solve(n-1, k, target-i);
             sum %= M;
         }
