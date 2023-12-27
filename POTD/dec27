@@ -7,6 +7,7 @@ public:
         {
             int sum = nt[i], maxi = nt[i];
             char cur = clrs[i++];
+
             while(i<n && clrs[i] == cur )
             {
                 maxi = max(maxi, nt[i]), sum += nt[i++];
