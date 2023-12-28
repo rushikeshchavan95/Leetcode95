@@ -2,6 +2,7 @@ class Solution {
 public:
     // time/space: O(nnk)/O(nk)
     int getLengthOfOptimalCompression(string s, int k) {
+
         vector<vector<int>> dp(s.size(), vector<int>(k + 1, INT_MAX));
         return helper(s, 0, k, dp);
     }
