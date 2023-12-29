@@ -7,7 +7,6 @@ public:
             return -1;
 
         vector<vector<int>> t(n+1, vector<int>(d+1, -1));
-        
         for (int i = 0; i < n; i++) 
         {
             t[i][1] = *max_element(begin(jobDifficulty) + i, end(jobDifficulty));
