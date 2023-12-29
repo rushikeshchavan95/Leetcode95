@@ -19,7 +19,6 @@ public:
             {
                 int maxDifficulty = INT_MIN;
                 int result        = INT_MAX;
-
                 for (int j = i; j <= n - days; j++) 
                 {
                     maxDifficulty   = max(maxDifficulty, jobDifficulty[j]);
