@@ -4,7 +4,8 @@ public:
         int n = words.size();
         unordered_map<char, int> count;
 
-        for (string& word : words) {
+        for (string& word : words) 
+        {
             for (char &ch : word) {
                 count[ch]++;
             }
