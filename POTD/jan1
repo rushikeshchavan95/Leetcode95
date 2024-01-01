@@ -9,8 +9,7 @@ public:
         int cnt=0;
         for(int i=0;cnt<g.size() && i<s.size();i++)
         {
-            if(s[i]>=g[cnt])
-            {
+            if(s[i]>=g[cnt]){
                 cnt++;
             }       
         }
