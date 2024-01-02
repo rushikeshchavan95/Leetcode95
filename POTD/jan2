@@ -8,7 +8,8 @@ public:
         
         vector<vector<int>> result;
 
-        for(int &num : nums) {
+        for(int &num : nums) 
+        {
             int freq = mp[num];
             
             if(freq == result.size()) {
