@@ -12,7 +12,8 @@ public:
         {
             int freq = mp[num];
             
-            if(freq == result.size()) {
+            if(freq == result.size()) 
+            {
                 result.push_back({});
             }
             
