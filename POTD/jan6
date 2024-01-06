@@ -14,7 +14,6 @@ public:
         {
             
             int profit = prev(dp.upper_bound(job[1]))->second + job[2];
-            
             if (profit > dp.rbegin()->second) dp[job[0]] = profit;
         }
         return dp.rbegin()->second;
