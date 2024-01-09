@@ -13,6 +13,7 @@ class Solution {
 public:
     
     void inOrder(TreeNode* root, string& s) {
+
         if(root == NULL) return;
         
         //leaf node
