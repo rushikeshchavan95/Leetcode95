@@ -1,0 +1,35 @@
+class Solution {
+    int n;
+    unordered_map<int,int> mp;
+    vector<string> temp;
+    int dfsBacktrack(vector<string>& w, vector<int>& s, int i){
+        if(i==n) {
+            int ans = 0;
+            for(auto ss:temp) for(auto v:ss) ans+= s[int(v - 'a')];
+            return ans;
+        }
+        
+        bool flag = true;
+        
+        int ansM = 0;
+        
+        ansM = dfsBacktrack(w,s,i+1);
+        
+        for(auto it:w[i]) {
+            mp[it]--;
+            if(mp[it]<0) flag = false;
+        }
+        
+        if(flag) temp.push_back(w[i]), ansM = max(ansM, dfsBacktrack(w,s,i+1));
+        if(flag) temp.pop_back();
+        
+        for(auto it:w[i])  mp[it]++;
+        return ansM;
+    }
+public:
+    int maxScoreWords(vector<string>& w, vector<char>& l, vector<int>& s) {
+        n = w.size();
+        for(auto it:l) mp[it]++;
+        return dfsBacktrack(w,s,0);
+    }
+};
