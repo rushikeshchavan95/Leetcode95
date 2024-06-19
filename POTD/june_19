@@ -21,6 +21,7 @@ public:
     }
 
     int minDays(vector<int>& bloomDay, int m, int k) {
+
         int start_day = 0;
         int end_day   = *max_element(begin(bloomDay), end(bloomDay));
 
