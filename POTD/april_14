@@ -15,8 +15,7 @@ public:
     
     void rSumOfLeftLeaves(TreeNode* node, bool isLeft){
     
-        if(node->left == NULL && node->right == NULL && isLeft)
-        {
+        if(node->left == NULL && node->right == NULL && isLeft){
             ans += node->val;
         }
         if(node->left)
