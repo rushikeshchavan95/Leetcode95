@@ -8,7 +8,8 @@ public:
             for(int j = i; j<n; j++) 
             {
                 int sum = accumulate(begin(nums)+i, begin(nums)+j+1, 0);
-                if(sum%k == 0) {
+                if(sum%k == 0) 
+                {
                     count++;
                 }
             }
