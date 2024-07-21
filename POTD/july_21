@@ -13,7 +13,6 @@ public:
             adj[u].push_back(v);
             indegree[v]++;
         }
-        
         queue<int> que;
         int count = 0;
         for (int i = 1; i <= n; i++) 
