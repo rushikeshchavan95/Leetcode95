@@ -1,0 +1,21 @@
+
+class Solution {
+public:
+    vector<int> frequencySort(std::vector<int>& nums) {
+        std::unordered_map<int, int> hmap;
+
+        for (int num : nums) 
+        {
+            hmap[num]++;
+        }
+        sort(nums.begin(), nums.end(), [&](int a, int b) 
+        {
+            if (hmap[a] == hmap[b]) {
+                return a > b; 
+            }
+            return hmap[a] < hmap[b];
+        });
+
+        return nums;
+    }
+};
