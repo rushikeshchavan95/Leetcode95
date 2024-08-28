@@ -1,0 +1,43 @@
+class Solution {
+public:
+    int n,m;
+    bool flag;
+    bool visited[1001][1001];
+
+    void dfs(int i,int j,vector<vector<int>>& grid1,vector<vector<int>>& grid2){
+
+        if(i<0 || j<0 || i>=n || j>=m || visited[i][j] || !grid2[i][j]){
+            return;
+        }
+        if(!grid1[i][j])
+        {
+            flag=false;
+        }
+        visited[i][j]=true;
+
+        dfs(i+1,j,grid1,grid2);
+        dfs(i-1,j,grid1,grid2);
+        dfs(i,j+1,grid1,grid2);
+        dfs(i,j-1,grid1,grid2);
+    }
+
+    int countSubIslands(vector<vector<int>>& grid1, vector<vector<int>>& grid2) {
+
+        n= grid1.size();
+        m=grid1[0].size();
+        int ans=0;
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+                if(!visited[i][j] && grid2[i][j])
+                {
+                    flag=true;
+                    dfs(i,j,grid1,grid2);
+                    ans+=flag;
+                }
+            }
+        }
+        return ans;
+    }
+};
